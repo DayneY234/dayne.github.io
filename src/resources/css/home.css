@@ -1,28 +1,30 @@
 .background {
     /* https://wallpapercave.com/wp/wp4312260.jpg */
-    background-image: url('https://img1.wallspic.com/crops/7/6/9/7/0/107967/107967-darkness-wood-atmosphere-web_design-web_page-1920x1080.jpg');
+    background-image: url('https://images.hdqwalls.com/download/blured-background-2560x1440.jpg');
 }
 
 .container {
-    height: 500px;
-    width: 500px;
-    position: relative;
-    padding-top: 10%;
+    height: 350px;
+    width: 300px;
+    position: fixed;
+    z-index: auto;
+}
+
+.search-wrapper {
+    grid-column: auto;
 }
 
 .search {
-    flex: 1;
+    flex: relative;
     z-index: 3;
-    left: 650px;
+    left: 40%;
     min-height: 44px;
     border: 1px solid #5f6368;
-    bottom: 250px;
     box-shadow: none;
     border-radius: 24px;
     padding: 5px 8px 0 14px;
-    position: relative;
+    position: sticky;
     border-style:ridge;
-    display: flex;
     width: 584px;
 }
 
@@ -30,4 +32,12 @@
     width: 1920;
     height: 1080;
     display: flex;
+}
+
+.top-nav {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    vertical-align: baseline;
 }

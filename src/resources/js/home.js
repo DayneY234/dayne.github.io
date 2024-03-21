@@ -11,14 +11,25 @@ async function fetchWebApi(endpoint, method, body) {
   return await res.json();
 }
 
-const topTracksIds = [
-  '5Ju9aLa212eAILfl5sWkjc','5rG6CAVA1vmZJG8RYwJdB1','7sg9kDT8H2P0wPACXnWRdN','5HDKfBmGnKhFcaBaixp6Ye','7sz6nHtAKOOt5cpOniz0sW'
-];
+async function getTopTracks(){
+    // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
+    return (await fetchWebApi(
+      'v1/me/top/tracks?time_range=short_term&limit=5', 'GET'
+    )).items;
+  }
+  
+  const topTracks = await getTopTracks();
+  console.log(
+    topTracks?.map(
+      ({name, artists}) =>
+        `${name} by ${artists.map(artist => artist.name).join(', ')}`
+    )
+  );
 
 async function getRecommendations(){
   // Endpoint reference : https://developer.spotify.com/documentation/web-api/reference/get-recommendations
   return (await fetchWebApi(
-    `v1/recommendations?limit=5&seed_tracks=${topTracksIds.join(',')}`, 'GET'
+    `v1/recommendations?limit=30&seed_tracks=${topTracks.id.join(',')}`, 'GET'
   )).tracks;
 }
 

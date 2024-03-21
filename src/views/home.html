@@ -6,14 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Something Fresh</title>
     <link rel="icon" href="../resources/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="../resources/css/home.css" rel="stylesheet">
     <link href="../resources/css/popup.css" rel="stylesheet">
 </head>
 <body class="background">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.html">
+          <img class="rounded-circle" src="../resources/img/favicon.ico" alt="" width="30" height="30">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitch.tv/">Twitch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://youtube.com/@fuslie/streams">Fuslie</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </nav>
     <!-- <div class="container">
+        https://static-00.iconduck.com/assets.00/twitch-icon-489x512-1gzzlm2x.png
         <iframe 
             style="border-radius:12px" 
             src="https://open.spotify.com/embed/playlist/40ZAr74SYCLq1wjV7IY5ne?utm_source=generator" 
+            src="https://open.spotify.com/embed/playlist/4h0HNF4wZa59M5Z4NUGMNK?utm_source=generator&theme=0"
             width="100%" 
             height="352" 
             frameBorder="0" 
@@ -22,7 +41,7 @@
             loading="lazy"
             ></iframe>
     </div> -->
-    <div class="container">
+    <div class="container" id="recommendations" onload="getTopTracks()">
         <iframe
             title="Spotify Embed: Recommendation Playlist "
             src="https://open.spotify.com/embed/playlist/4h0HNF4wZa59M5Z4NUGMNK?utm_source=generator&theme=0"
@@ -34,7 +53,8 @@
             loading="lazy"
         ></iframe>
     </div>
-    <form action="https://google.com/search" method="get">
+    <form class="search-wrapper" action="https://google.com/search" method="get">
         <input type="text" name="q" class="search" id="search" placeholder="Search Google or type a URL">
     </form>
+    <script src="../resources/js/home.js"></script>
 </body>
