@@ -4,26 +4,28 @@
 }
 
 .container {
-    height: 350px;
-    width: 300px;
-    position: fixed;
-    z-index: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .search-wrapper {
-    grid-column: auto;
+    position: relative;    
+    top: 400px;
+}
+
+.spotify {
+    position: relative;
+    top: 20px;
+    right: 700px;
 }
 
 .search {
-    flex: relative;
-    z-index: 3;
-    left: 40%;
     min-height: 44px;
     border: 1px solid #5f6368;
     box-shadow: none;
     border-radius: 24px;
     padding: 5px 8px 0 14px;
-    position: sticky;
     border-style:ridge;
     width: 584px;
 }

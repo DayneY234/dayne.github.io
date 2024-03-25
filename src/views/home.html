@@ -41,20 +41,27 @@
             loading="lazy"
             ></iframe>
     </div> -->
-    <div class="container" id="recommendations" onload="getTopTracks()">
+    <div class="container">
+      <div class="spotify" id="recommendations" onload="getTopTracks()">
         <iframe
-            title="Spotify Embed: Recommendation Playlist "
-            src="https://open.spotify.com/embed/playlist/4h0HNF4wZa59M5Z4NUGMNK?utm_source=generator&theme=0"
-            width="100%"
-            height="100%"
-            style="min-height: 360px;"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
+          title="Spotify Embed: Recommendation Playlist "
+          src="https://open.spotify.com/embed/playlist/4h0HNF4wZa59M5Z4NUGMNK?utm_source=generator&theme=0"
+          width="100%"
+          height="100%"
+          style="min-height: 360px;"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
         ></iframe>
+      </div>
+      
+      <div class="search-wrapper">
+        <form action="https://google.com/search" method="get" target="_blank">
+          <input type="text" name="q" class="search" id="search" placeholder="Search Google or type a URL">
+        </form>  
+      </div>
+      
     </div>
-    <form class="search-wrapper" action="https://google.com/search" method="get" target="_blank">
-        <input type="text" name="q" class="search" id="search" placeholder="Search Google or type a URL">
-    </form>
+    
     <script src="../resources/js/home.js"></script>
 </body>
