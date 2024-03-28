@@ -5,41 +5,38 @@
 
 .container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     position: relative;
+    /* border: 5px dotted brown; */
 }
 
-.search-wrapper {
-    position: relative;    
-    top: 400px;
+h1 {
+    font-family: Helvetica;
+    font: 20px;
+    color: rgb(68, 67, 67);
+}
+
+.search-wrapper { 
+    /* border: 5px solid lime; */
+    align-self: last baseline;
+    text-align: center;
+    flex-shrink: 1;
+    flex: 2;
 }
 
 .spotify {
-    position: relative;
-    top: 20px;
-    right: 700px;
+    /* border: 5px red solid; */
+    align-self: flex-start;
 }
 
 .search {
     min-height: 44px;
+    min-width: 450px;
     border: 1px solid #5f6368;
     box-shadow: none;
     border-radius: 24px;
     padding: 5px 8px 0 14px;
     border-style:ridge;
-    width: 584px;
-}
-
-.backgroundImage {
-    width: 1920;
-    height: 1080;
-    display: flex;
-}
-
-.top-nav {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    box-sizing: border-box;
-    vertical-align: baseline;
 }
