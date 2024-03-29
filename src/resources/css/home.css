@@ -9,6 +9,8 @@
     flex-wrap: nowrap;
     align-items: center;
     position: relative;
+    margin-right: 5%;
+    margin-left: 25%;
     /* border: 5px dotted brown; */
 }
 
@@ -20,7 +22,7 @@ h1 {
 
 .search-wrapper { 
     /* border: 5px solid lime; */
-    align-self: last baseline;
+    align-self: self-end;
     text-align: center;
     flex-shrink: 1;
     flex: 2;
