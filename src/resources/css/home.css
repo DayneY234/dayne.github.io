@@ -13,6 +13,19 @@
     margin-left: 34%;
     /* border: 5px dotted brown; */
 }
+@media only screen and (max-width: 1920px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        position: relative;
+        margin-right: 5%;
+        margin-left: 28%;
+        /* border: 5px dotted brown; */
+    }
+    
+}
 
 h1 {
     font-family: Helvetica;
@@ -42,3 +55,5 @@ h1 {
     padding: 5px 8px 0 14px;
     border-style:ridge;
 }
+
+
