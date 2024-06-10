@@ -1,0 +1,54 @@
+.background {
+    background-image: url('https://images.hdqwalls.com/download/blured-background-2560x1440.jpg');
+    /* Use background-size for better responsiveness */
+    background-size: cover; /* Or contain, depending on desired effect */
+    background-position: center; /* Optional, for better image placement */
+    min-height: 100vh; /* Ensure background covers full viewport height */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+    justify-content: space-around; /* Distribute space evenly */
+    padding: 20px; /* Add padding for visual spacing */
+
+    /* Remove fixed margins, use padding or max-width on a parent container */
+}
+
+/* Remove the 1920px media query, as flex-wrap will handle most adjustments */
+
+h1 {
+    font-family: Helvetica, sans-serif; /* Add fallback font */
+    font-size: 20px; 
+    color: rgb(68, 67, 67);
+
+    /* Add margin for better spacing */
+    margin-bottom: 10px; 
+}
+
+.search-wrapper {
+    text-align: center;
+    flex: 1; /* Distribute space equally between items */
+    margin-bottom: 20px; /* Add margin for better spacing on smaller screens */
+}
+
+.spotify {
+    flex: 1; /* Distribute space equally between items */
+}
+
+.search {
+    min-height: 44px;
+    width: 100%; /* Make the search bar take full width of its container */
+    max-width: 450px; /* Limit maximum width for larger screens */
+    border: 1px solid #5f6368;
+    box-shadow: none;
+    border-radius: 24px;
+    padding: 5px 8px 0 14px;
+    border-style: ridge;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(68, 67, 67);
+}

@@ -1,20 +1,74 @@
 .background {
-    /* https://wallpapercave.com/wp/wp4312260.jpg */
     background-image: url('https://images.hdqwalls.com/download/blured-background-2560x1440.jpg');
+    /* Ensure responsive background */
+    background-size: cover; 
+    background-position: center;
+    min-height: 100vh;
 }
+
 .container {
-    display: grid;
+    display: flex;
+    flex-direction: row; /* Start with row layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     align-items: center;
     position: relative;
-    border: 5px dotted brown;
+    margin: 2% auto; /* Center container horizontally with some margin */
+    /* Avoid fixed pixel values for margins */
+    /* border: 5px dotted brown;  For debugging only */
+}
+
+/* Remove the specific @media query for 1920px, as it's not necessary with the changes below */
+
+h1 {
+    font-family: Helvetica;
+    font-size: 20px; /* Use font-size instead of 'font: 20px' */
+    color: rgb(68, 67, 67);
+}
+
+.search-wrapper {
+    /* Adjust flex values for better responsiveness */
+    flex: 1 1 40%;  /* At least 40% width, can grow and shrink */
+    margin: 10px;  /* Add some margin for spacing */
+    text-align: center;
+}
+
+.spotify {
+    /* Adjust flex values for better responsiveness */
+    flex: 1 1 40%; /* At least 40% width, can grow and shrink */
+    margin: 10px; 
 }
 
 .search {
+    /* Use relative units for responsiveness */
     min-height: 44px;
-    min-width: 450px;
+    width: 90%; /* Adjust width as needed */
+    max-width: 450px; /* Cap maximum width */
     border: 1px solid #5f6368;
     box-shadow: none;
     border-radius: 24px;
     padding: 5px 8px 0 14px;
-    border-style:ridge;
+    border-style: ridge;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For smaller screens */
+    .container {
+        flex-direction: column; /* Switch to column layout */
+    }
+
+    .search-wrapper,
+    .spotify {
+        flex: 1 1 auto; /* Allow elements to take full width */
+    }
+
+    .search {
+        width: 95%;
+    }
+}
+
+
+.dropdown-item:hover {
+    background-color: rgb(68, 67, 67);
 }
